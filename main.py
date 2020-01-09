@@ -1,17 +1,25 @@
+from dynamicArray import DynamicArray
 
-from vector import Vector
+d = DynamicArray()
 
-v = Vector(10)
+d.append(2)
+d.append(3)
+d.append(4)
 
-for i in range(len(v)):
-    v[i] = i + 1
+d[0] = 1
 
+del d[1]
 
-for x in v:
+d.append(6)
+
+d.append(0)
+
+def function(a, b):
+    if a > b:
+        return True
+    else:
+        return False
+    
+d.shell_sort(function)
+for x in d:
     print(x)
-
-del v[5]
-
-print(len(v))
-
-print(v[5])
